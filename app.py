@@ -81,7 +81,7 @@ Always provide source links when available.
 """
 
 def build_agent(api_key: str):
-    model = ChatGroq(model="llama-3.1-8b-instant", temperature=0, api_key=api_key)
+    model = ChatGroq(model="llama-3.1-70b-versatile", temperature=0, api_key=api_key)
     return create_agent(model=model, tools=[search_clinical_trials, search_pubmed, lookup_drug_or_compound], system_prompt=SYSTEM_PROMPT)
 
 # -----------------------------
